@@ -1,6 +1,6 @@
 //
 //  BJXShareBarHud.m
-//  bjxjob
+//  SwitchControllerDemo
 //
 //  Created by 北极星电力 on 16/8/8.
 //  Copyright © 2016年 DongLiHuoChe. All rights reserved.

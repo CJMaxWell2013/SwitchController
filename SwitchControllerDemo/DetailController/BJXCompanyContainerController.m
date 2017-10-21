@@ -1,9 +1,9 @@
 //
 //  BJXCompanyContainerController.m
-//  bjxjob
+//  SwitchControllerDemo
 //
-//  Created by 北极星电力 on 2017/10/13.
-//  Copyright © 2017年 DongLiHuoChe. All rights reserved.
+//  Created by J.Cheng on 2017/10/21.
+//  Copyright © 2017年 None. All rights reserved.
 //
 
 #import "BJXCompanyContainerController.h"
@@ -78,7 +78,7 @@
     [self setupAllConsts];
     [self setupTouchEvent];
     
-    [self setupBackBarItem];
+    //[self setupBackBarItem];
     [self setupRightBarItems];
     [self setupChilldController];
     [self analogNetworkRequest];
@@ -86,8 +86,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTranslucent:NO];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:BJXLagoGrayColor] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -145,7 +147,7 @@
 }
 
 - (void)setupChilldController {
-    BJXContainerScrollView *scrollView = [[BJXContainerScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64.0f)];
+    BJXContainerScrollView *scrollView = [[BJXContainerScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     scrollView.delegate = self;
     scrollView.backgroundColor = BJXColor(234, 234, 234, 1);
@@ -378,6 +380,7 @@
 
 - (void)analogNetworkRequest {
     [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeCustom];
     __weak typeof (self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (arc4random() % 2) {
@@ -385,6 +388,7 @@
             [SVProgressHUD dismiss];
             weakSelf.shareBtn.userInteractionEnabled = YES;
         }else {
+            [SVProgressHUD dismiss];
             BJXNetworkErrorHud *hud = [BJXNetworkErrorHud networkErrorHudShowInView:weakSelf.view setImageTopInsertConstH:64.0f];
             hud.delegate = weakSelf;
             weakSelf.shareBtn.userInteractionEnabled = NO;

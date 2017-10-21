@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401B1761F9B6453006B73FD /* UIImage+GenByColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401B1751F9B6453006B73FD /* UIImage+GenByColor.m */; };
 		041AC3911F9B51CA0092B781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AC3901F9B51CA0092B781 /* main.m */; };
 		041AC3941F9B51CA0092B781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AC3931F9B51CA0092B781 /* AppDelegate.m */; };
 		041AC3971F9B51CA0092B781 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AC3961F9B51CA0092B781 /* ViewController.m */; };
@@ -28,11 +29,12 @@
 		041E87081F9B622A007F9117 /* BJXNetworkErrorHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E87061F9B622A007F9117 /* BJXNetworkErrorHud.m */; };
 		041E87091F9B622A007F9117 /* BJXNetworkErrorHud.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041E87071F9B622A007F9117 /* BJXNetworkErrorHud.xib */; };
 		04AC37841F9B608600B72FD3 /* BJXConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC37801F9B608600B72FD3 /* BJXConstDefine.m */; };
-		04AC37851F9B608600B72FD3 /* BJXHttpConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC37821F9B608600B72FD3 /* BJXHttpConst.m */; };
 		EC6282940EBA85457D06000E /* libPods-SwitchControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69899783DE497D6DB372DDA6 /* libPods-SwitchControllerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0401B1741F9B6453006B73FD /* UIImage+GenByColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GenByColor.h"; sourceTree = "<group>"; };
+		0401B1751F9B6453006B73FD /* UIImage+GenByColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GenByColor.m"; sourceTree = "<group>"; };
 		041AC38C1F9B51CA0092B781 /* SwitchControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041AC3901F9B51CA0092B781 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		041AC3921F9B51CA0092B781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,8 +71,6 @@
 		041E87071F9B622A007F9117 /* BJXNetworkErrorHud.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BJXNetworkErrorHud.xib; sourceTree = "<group>"; };
 		04AC377F1F9B608600B72FD3 /* BJXConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJXConstDefine.h; sourceTree = "<group>"; };
 		04AC37801F9B608600B72FD3 /* BJXConstDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJXConstDefine.m; sourceTree = "<group>"; };
-		04AC37811F9B608600B72FD3 /* BJXHttpConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJXHttpConst.h; sourceTree = "<group>"; };
-		04AC37821F9B608600B72FD3 /* BJXHttpConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJXHttpConst.m; sourceTree = "<group>"; };
 		04AC37831F9B608600B72FD3 /* BJXPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJXPrefixHeader.pch; sourceTree = "<group>"; };
 		4FC1084BD506816E36BC5AFB /* Pods-SwitchControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwitchControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwitchControllerDemo/Pods-SwitchControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		69899783DE497D6DB372DDA6 /* libPods-SwitchControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwitchControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +157,8 @@
 		041AC3CF1F9B57800092B781 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0401B1741F9B6453006B73FD /* UIImage+GenByColor.h */,
+				0401B1751F9B6453006B73FD /* UIImage+GenByColor.m */,
 				041E87051F9B622A007F9117 /* BJXNetworkErrorHud.h */,
 				041E87061F9B622A007F9117 /* BJXNetworkErrorHud.m */,
 				041E87071F9B622A007F9117 /* BJXNetworkErrorHud.xib */,
@@ -177,8 +179,6 @@
 			children = (
 				04AC377F1F9B608600B72FD3 /* BJXConstDefine.h */,
 				04AC37801F9B608600B72FD3 /* BJXConstDefine.m */,
-				04AC37811F9B608600B72FD3 /* BJXHttpConst.h */,
-				04AC37821F9B608600B72FD3 /* BJXHttpConst.m */,
 				04AC37831F9B608600B72FD3 /* BJXPrefixHeader.pch */,
 			);
 			path = Configuration;
@@ -330,7 +330,6 @@
 			files = (
 				041AC3C91F9B56F20092B781 /* BJXContainerScrollView.m in Sources */,
 				041AC3971F9B51CA0092B781 /* ViewController.m in Sources */,
-				04AC37851F9B608600B72FD3 /* BJXHttpConst.m in Sources */,
 				041AC3E11F9B57800092B781 /* BJXShareItemButton.m in Sources */,
 				041AC3B41F9B54C00092B781 /* BJXCompanyContainerController.m in Sources */,
 				041AC3B81F9B54C00092B781 /* BJXCompanyJobsController.m in Sources */,
@@ -343,6 +342,7 @@
 				041AC3B31F9B54C00092B781 /* BJXCompanyBaseController.m in Sources */,
 				041AC3DB1F9B57800092B781 /* BJXCollectionViewTestCell.m in Sources */,
 				041E87081F9B622A007F9117 /* BJXNetworkErrorHud.m in Sources */,
+				0401B1761F9B6453006B73FD /* UIImage+GenByColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
