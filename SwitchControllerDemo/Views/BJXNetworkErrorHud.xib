@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BJXNetworkErrorHud">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi_image" translatesAutoresizingMaskIntoConstraints="NO" id="lz9-2U-VfM">
+                    <rect key="frame" x="0.0" y="78" width="375" height="108"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="108" id="WHI-1N-fBm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数据加载失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBs-Bu-Sit">
+                    <rect key="frame" x="0.0" y="231" width="375" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="cTH-im-rRL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLx-S2-fxT">
+                    <rect key="frame" x="75" y="320" width="225" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.26666666666666666" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="D5b-ft-YIk"/>
+                        <constraint firstAttribute="width" constant="225" id="Gpf-Dl-O2T"/>
+                    </constraints>
+                    <state key="normal" title="重新加载">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tryButtonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="T3G-Vg-qpn"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请确保您的手机已经联网" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viZ-wD-DVm">
+                    <rect key="frame" x="0.0" y="269" width="375" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="plj-F0-tTw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lz9-2U-VfM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5XM-VF-sgf"/>
+                <constraint firstItem="lz9-2U-VfM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="78" id="JVu-7y-fEK"/>
+                <constraint firstItem="viZ-wD-DVm" firstAttribute="top" secondItem="EBs-Bu-Sit" secondAttribute="bottom" constant="20" id="P89-Lr-QM3"/>
+                <constraint firstItem="ZLx-S2-fxT" firstAttribute="top" secondItem="viZ-wD-DVm" secondAttribute="bottom" constant="32" id="Xid-dE-05q"/>
+                <constraint firstItem="viZ-wD-DVm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cUB-nD-Ejo"/>
+                <constraint firstItem="ZLx-S2-fxT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dRs-6h-GKK"/>
+                <constraint firstAttribute="trailing" secondItem="EBs-Bu-Sit" secondAttribute="trailing" id="dau-bl-Ac3"/>
+                <constraint firstItem="EBs-Bu-Sit" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gDU-Tb-0YW"/>
+                <constraint firstAttribute="trailing" secondItem="lz9-2U-VfM" secondAttribute="trailing" id="oLG-tV-2GC"/>
+                <constraint firstItem="EBs-Bu-Sit" firstAttribute="top" secondItem="lz9-2U-VfM" secondAttribute="bottom" constant="45" id="sab-M4-Dx5"/>
+                <constraint firstAttribute="trailing" secondItem="viZ-wD-DVm" secondAttribute="trailing" id="vfG-cg-Wqo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="againBtn" destination="ZLx-S2-fxT" id="fwz-mJ-EsR"/>
+                <outlet property="againBtnTopConstY" destination="Xid-dE-05q" id="k8Q-rp-2QZ"/>
+                <outlet property="checkNetLableConstH" destination="plj-F0-tTw" id="F0J-DV-5Lc"/>
+                <outlet property="checkNetTopConstY" destination="P89-Lr-QM3" id="ydm-lV-3SJ"/>
+                <outlet property="dataErrorLableConstH" destination="cTH-im-rRL" id="8hD-il-hfO"/>
+                <outlet property="dataErrorTopConstY" destination="sab-M4-Dx5" id="RZz-hX-Erg"/>
+                <outlet property="imageConstH" destination="WHI-1N-fBm" id="E3s-Wv-0q8"/>
+                <outlet property="wifiTopConstY" destination="JVu-7y-fEK" id="O2x-cu-yu6"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="wifi_image" width="156" height="107"/>
+    </resources>
+</document>

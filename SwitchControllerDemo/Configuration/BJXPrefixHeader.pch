@@ -1,0 +1,29 @@
+//
+//  BJXPrefixHeader.pch
+//  bjxjob
+//
+//  Created by 北极星电力 on 16/8/22.
+//  Copyright © 2016年 DongLiHuoChe. All rights reserved.
+//
+
+#ifndef BJXPrefixHeader_pch
+#define BJXPrefixHeader_pch
+
+
+// 北极星常量
+#import "BJXConstDefine.h"
+#import <MJRefresh.h>
+#import <SVProgressHUD.h>
+// 日志输出
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
+
+// fcc
+
+
+// system
+#endif /* BJXPrefixHeader_pch */
+// system
